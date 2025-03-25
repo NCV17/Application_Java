@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controllers.UserDashboardController">
+
+    <!-- Sidebar -->
+    <left>
+        <Label fx:id="welcomeLabel" text="Chào mừng đến User Dashboard!" />
+
+        <VBox spacing="10" fx:id="sidebar" alignment="TOP_CENTER">
+            <Label text="🎓 User Dashboard" fx:id="lblDashboardTitle" />
+            <Button text="📚 Khóa học của tôi" fx:id="btnMyCourses" styleClass="sidebar-btn"/>
+            <Button text="💰 Lịch sử thanh toán" fx:id="btnPaymentHistory" styleClass="sidebar-btn"/>
+            <Button text="👤 Hồ sơ cá nhân" fx:id="btnProfile" styleClass="sidebar-btn"/>
+            <Button text="🚪 Đăng xuất" fx:id="btnLogout" styleClass="logout-btn"/>
+        </VBox>
+    </left>
+
+    <!-- Nội dung chính -->
+    <center>
+        <StackPane fx:id="contentPane">
+            <Label text="Chào mừng đến User Dashboard!" fx:id="lblWelcome"/>
+        </StackPane>
+    </center>
+</BorderPane>

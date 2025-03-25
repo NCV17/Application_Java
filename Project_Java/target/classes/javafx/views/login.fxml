@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controllers.LoginController" prefWidth="450" prefHeight="370">
+    <children>
+        <GridPane alignment="CENTER" hgap="10" vgap="10" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50" AnchorPane.bottomAnchor="50">
+            <!-- Tên đăng nhập -->
+            <Label text="Tên đăng nhập:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtUsername" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <!-- Mật khẩu -->
+            <Label text="Mật khẩu:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <PasswordField fx:id="txtPassword" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- Nút Đăng nhập -->
+            <Button text="Đăng nhập" prefWidth="100" onAction="#handleLogin" GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-margin-top: 10px;"/>
+
+            <!-- Thông báo lỗi -->
+            <Label fx:id="messageLabel" text="" textFill="red" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+            <!-- Nút Chưa có tài khoản? Đăng ký ngay -->
+            <Button text="Chưa có tài khoản? Đăng ký ngay" onAction="#switchToRegister" style="-fx-background-color: transparent; -fx-text-fill: blue; -fx-underline: true;" GridPane.rowIndex="4" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
+        </GridPane>
+    </children>
+</AnchorPane>
