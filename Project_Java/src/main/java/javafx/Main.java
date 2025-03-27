@@ -2,7 +2,6 @@ package javafx;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import javafx.controllers.LoginApp;
 
 public class Main extends Application {
     public static Stage welcomeStage;

@@ -66,7 +66,7 @@ public class UserDashboardController {
             try {
                 // Chuyển về giao diện đăng nhập
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/javafx/views/welcome.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/javafx/views/login.fxml"));
                 Scene scene = new Scene(loader.load());
                 stage.setScene(scene);
                 stage.show();

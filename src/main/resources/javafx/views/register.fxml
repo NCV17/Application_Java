@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
@@ -88,7 +87,7 @@
                       <Font name="System Bold" size="30.0" />
                   </font>
                   <fill>
-                      <RadialGradient centerX="0.40265487569623293" centerY="0.23106062773502234" radius="0.5">
+                      <RadialGradient radius="0.5">
                           <stops>
                               <Stop>
                                   <color>
@@ -106,7 +105,7 @@
               </Text>
           </children>
       </AnchorPane>
-      <Button layoutX="422.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #0598ff;" text="Đăng ký" onAction="#handleRegister" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="422.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleRegister" style="-fx-background-color: #0598ff;" text="Đăng ký" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -125,7 +124,7 @@
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="LIGHTEN" height="60.0" layoutX="426.0" stroke="BLACK" strokeType="INSIDE" width="61.0">
          <fill>
-            <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                <stops>
                   <Stop>
                      <color>
@@ -134,16 +133,16 @@
                   </Stop>
                   <Stop offset="0.006729475100942127">
                      <color>
-                        <Color red="0.821052610874176" green="0.6598830223083496" blue="0.6598830223083496" />
+                        <Color red="0.10916179418563843" green="0.13008446991443634" blue="0.7368420958518982" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.06613197922706604" green="0.04800000041723251" blue="0.800000011920929" />
+                        <Color red="0.1599999964237213" green="0.5546666383743286" blue="0.800000011920929" />
                      </color>
                   </Stop>
                </stops>
-            </LinearGradient>
+            </RadialGradient>
          </fill></Rectangle>
       <Text layoutX="381.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Register" textAlignment="CENTER">
          <font>
@@ -154,17 +153,17 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.75789475440979" green="0.30877193808555603" blue="0.30877193808555603" />
+                        <Color red="0.3819103240966797" green="0.4043937623500824" blue="0.8315789699554443" />
                      </color>
                   </Stop>
-                  <Stop offset="0.835800807537012">
+                  <Stop offset="0.763122476446837">
                      <color>
-                        <Color red="0.75789475440979" green="0.30877193808555603" blue="0.30877193808555603" />
+                        <Color red="0.37049999833106995" green="0.727858304977417" blue="0.949999988079071" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.8799999952316284" green="0.5455999970436096" blue="0.8474937081336975" />
+                        <Color red="0.5147368311882019" green="0.7062105536460876" blue="0.8526315689086914" />
                      </color>
                   </Stop>
                </stops>

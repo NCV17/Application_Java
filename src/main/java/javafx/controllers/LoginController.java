@@ -117,11 +117,6 @@ public class LoginController {
                     loginStage.close();
                 }
 
-                // Đóng Welcome nếu cần
-                if (Main.welcomeStage != null) {
-                    Main.welcomeStage.close();
-                }
-
                 // Mở giao diện Dashboard
                 openDashboard(role);
 
