@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controllers.RegisterController">
+    <children>
+        <GridPane alignment="CENTER" hgap="10" layoutX="307.2" layoutY="122.8" prefHeight="191.0" prefWidth="298.0" vgap="10" AnchorPane.bottomAnchor="86.80000000000001" AnchorPane.leftAnchor="307.2" AnchorPane.rightAnchor="-4.7999999999999545" AnchorPane.topAnchor="122.8">
+            <!-- Tên đăng nhập -->
+            <Label lineSpacing="1.0" prefHeight="38.0" prefWidth="107.0" text=" Tên đăng nhập:" textAlignment="CENTER" textFill="#19149e">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <TextField fx:id="txtUsername" prefWidth="220" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-radius: 5px;" GridPane.columnIndex="1" />
+
+            <!-- Mật khẩu -->
+            <Label prefHeight="32.0" prefWidth="128.0" text=" Mật khẩu:" textFill="#19149e" GridPane.rowIndex="1">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <PasswordField fx:id="txtPassword" prefWidth="220" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <!-- Xác nhận mật khẩu -->
+            <Label prefHeight="27.0" prefWidth="115.0" text=" Xác nhận mật khẩu:" textFill="#19149e" GridPane.rowIndex="2">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <PasswordField fx:id="txtConfirmPassword" prefWidth="220" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <!-- Email -->
+            <Label prefHeight="44.0" prefWidth="134.0" text=" Email:" textFill="#19149e" GridPane.rowIndex="3">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <TextField fx:id="txtEmail" prefWidth="220" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <!-- Số điện thoại -->
+            <Label prefHeight="38.0" prefWidth="122.0" text=" Số điện thoại:" textFill="#19149e" GridPane.rowIndex="4">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <TextField fx:id="txtPhone" prefWidth="220" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <columnConstraints>
+            <ColumnConstraints maxWidth="123.39998779296874" minWidth="106.6" prefWidth="115.6" />
+            <ColumnConstraints maxWidth="172.99999999999997" minWidth="156.20001220703122" prefWidth="160.79999999999998" />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+
+        </GridPane>
+      <AnchorPane prefHeight="410.0" prefWidth="300.0" style="-fx-background-color: #0598ff;">
+          <children>
+              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@img/book.png" />
+                  </image>
+                  <effect>
+                      <ColorAdjust brightness="1.0" />
+                  </effect>
+              </ImageView>
+              <Text layoutX="46.0" layoutY="255.0" text="IT Study Space">
+                  <font>
+                      <Font name="System Bold" size="30.0" />
+                  </font>
+                  <fill>
+                      <RadialGradient centerX="0.40265487569623293" centerY="0.23106062773502234" radius="0.5">
+                          <stops>
+                              <Stop>
+                                  <color>
+                                      <Color opacity="0.6000000238418579" />
+                                  </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                  <color>
+                                      <Color red="1.0" green="1.0" blue="1.0" />
+                                  </color>
+                              </Stop>
+                          </stops>
+                      </RadialGradient>
+                  </fill>
+              </Text>
+          </children>
+      </AnchorPane>
+      <Button layoutX="422.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #0598ff;" text="Đăng ký" onAction="#handleRegister" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+
+        <Label fx:id="messageLabel" layoutX="310.0" layoutY="350.0" managed="false" textFill="RED" visible="false" />
+
+      <Hyperlink layoutX="432.0" layoutY="372.0" onAction="#switchToLogin" text="Đã có tài khoản? Đăng nhập" />
+      <ImageView fitHeight="54.0" fitWidth="55.0" layoutX="429.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/register.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-1.0" contrast="-1.0" hue="0.01" saturation="-1.0" />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="LIGHTEN" height="60.0" layoutX="426.0" stroke="BLACK" strokeType="INSIDE" width="61.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.821052610874176" green="0.6598830223083496" blue="0.6598830223083496" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color red="0.821052610874176" green="0.6598830223083496" blue="0.6598830223083496" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.06613197922706604" green="0.04800000041723251" blue="0.800000011920929" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Text layoutX="381.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Register" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.4734513527524154" centerY="0.7462121212121212" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75789475440979" green="0.30877193808555603" blue="0.30877193808555603" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.835800807537012">
+                     <color>
+                        <Color red="0.75789475440979" green="0.30877193808555603" blue="0.30877193808555603" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8799999952316284" green="0.5455999970436096" blue="0.8474937081336975" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+    </children>
+</AnchorPane>

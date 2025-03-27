@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controllers.WelcomeController"
+            style="-fx-background-color: #2980b9;">
+    <children>
+        <!-- Logo Khóa Học IT -->
+        <Label text="KHÓA HỌC IT" layoutX="50" layoutY="50"
+               style="-fx-font-size: 30px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+        <!-- Form chứa nút đăng nhập và đăng ký -->
+        <VBox alignment="CENTER" spacing="15" prefWidth="400" prefHeight="250"
+              style="-fx-background-color: #ffffff; -fx-padding: 30px; -fx-border-radius: 15px; -fx-background-radius: 15px;
+                     -fx-border-color: #3498db; -fx-border-width: 2px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5);"
+              AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50"
+              AnchorPane.topAnchor="100" AnchorPane.bottomAnchor="100">
+            <Label text="Đăng nhập / Đăng ký"
+                   style="-fx-font-size: 22px; -fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+
+            <!-- Nút đăng nhập -->
+            <Button fx:id="loginButton" text="🚀 Đăng nhập" onAction="#switchToLogin"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 16px;
+                           -fx-padding: 10px 20px; -fx-border-radius: 10px; -fx-background-radius: 10px;
+                           -fx-font-weight: bold;"/>
+
+            <!-- Nút đăng ký -->
+            <Button fx:id="registerButton" text="📝 Đăng ký" onAction="#switchToRegister"
+                    style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 16px;
+                           -fx-padding: 10px 20px; -fx-border-radius: 10px; -fx-background-radius: 10px;
+                           -fx-font-weight: bold;"/>
+        </VBox>
+    </children>
+</AnchorPane>
